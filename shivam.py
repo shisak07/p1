@@ -340,10 +340,10 @@ def handle_bgmi(message):
                 # Use a proxy if available
                 proxy = get_random_proxy()
                 if proxy:
-                    full_command = f"proxychains4 -q /lg {target} {port} {time} 600"
+                    full_command = f"proxychains4 -q ./lg {target} {port} {time} 600"
                     os.environ['PROXYCHAINS_PROXY'] = proxy
                 else:
-                    full_command = f"/lg {target} {port} {time} 600"
+                    full_command = f"./lg {target} {port} {time} 600"
                     subprocess.run(full_command, shell=True)
                 response = f"💎 𝐃𝐄𝐀𝐑 𝐕𝐈𝐏 𝐔𝐒𝐄𝐑 {user_name} 💎\n\n🛑 𝐘𝐎𝐔𝐑 𝐀𝐓𝐓𝐀𝐂𝐊 𝐅𝐈𝐍𝐈𝐒𝐇𝐄𝐃 🛑\n\n🎯 𝐇𝐨𝐬𝐭: {target}\n🔗 𝐏𝐨𝐫𝐭: {port}\n⏳ 𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n⚙️ 𝐌𝐞𝐭𝐡𝐨𝐝 : PREMIUM\n\n📝 𝐀𝐝𝐯𝐢𝐜𝐞 :-\n📶 𝐘𝐨𝐮𝐫 𝐈𝐧𝐭𝐞𝐫𝐧𝐞𝐭 𝐈𝐬 𝐍𝐨𝐫𝐦𝐚𝐥 𝐍𝐨𝐰 𝐊𝐢𝐥𝐥 𝐀𝐥𝐥 𝐓𝐡𝐞 𝐏𝐥𝐚𝐲𝐞𝐫'𝐬 𝐀𝐧𝐝 𝐆𝐢𝐯𝐞 𝐅𝐞𝐞𝐝𝐛𝐚𝐜𝐤𝐬 𝐈𝐧"
         else:
@@ -390,7 +390,7 @@ def show_help(message):
 💎 /admin : 𝐒𝐡𝐨𝐰𝐬 𝐀𝐥𝐥 𝐀𝐝𝐦𝐢𝐧 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬.
 
 🛒 𝐁𝐮𝐲 𝐅𝐫𝐨𝐦 :-\n𝟏.@ILLEGALCHEAT78\n
-🏫𝐎𝐟𝐟𝐢𝐜𝐢𝐚𝐥 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 :- https://t.me/+blZi-C4ujVszZTQ1
+🏫𝐎𝐟𝐟𝐢𝐜𝐢𝐚𝐥 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 :- https://t.me/+5Ig7AVsqWowwM2I1
 '''
     for handler in bot.message_handlers:
         if hasattr(handler, 'commands'):
@@ -405,7 +405,7 @@ def show_help(message):
 @bot.message_handler(commands=['start'])
 def welcome_start(message):
     user_name = message.from_user.first_name
-    response = f'''💐𝐖𝐞𝐥𝐜𝐨𝐦𝐞 {𝐮𝐬𝐞𝐫_𝐧𝐚𝐦𝐞} 𝐓𝐨 𝐎𝐮𝐫 𝐁𝐨𝐭 :-\n🤖 HYPER BOT 🤖\n𝐅𝐞𝐞𝐥 𝐅𝐫𝐞𝐞 𝐓𝐨 𝐄𝐱𝐩𝐥𝐨𝐫𝐞\n𝐅𝐨𝐫 𝐌𝐨𝐫𝐞 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐓𝐫𝐲 𝐓𝐨 𝐑𝐮𝐧 𝐓𝐡𝐢𝐬 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 : /help\n
+    response = f'''💐𝐖𝐞𝐥𝐜𝐨𝐦𝐞 {𝐮𝐬𝐞𝐫_𝐧𝐚𝐦𝐞} 𝐓𝐨 𝐎𝐮𝐫 𝐁𝐨𝐭 :-\n🤖 ILLEGAL BOT 🤖\n𝐅𝐞𝐞𝐥 𝐅𝐫𝐞𝐞 𝐓𝐨 𝐄𝐱𝐩𝐥𝐨𝐫𝐞\n𝐅𝐨𝐫 𝐌𝐨𝐫𝐞 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐓𝐫𝐲 𝐓𝐨 𝐑𝐮𝐧 𝐓𝐡𝐢𝐬 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 : /help\n
 🛒 𝐁𝐮𝐲 𝐀𝐜𝐜𝐞𝐬𝐬 𝐅𝐫𝐨𝐦 :-\n𝟏.@ILLEGALCHEAT78'''
     bot.reply_to(message, response)
 
@@ -415,7 +415,7 @@ def welcome_rules(message):
     response = f'''{user_name} 𝐏𝐥𝐞𝐚𝐬𝐞 𝐅𝐨𝐥𝐥𝐨𝐰 𝐓𝐡𝐞𝐬𝐞 𝐑𝐮𝐥𝐞𝐬 🚦:
 𝟏. 𝐃𝐨𝐧𝐭 𝐑𝐮𝐧 𝐓𝐨𝐨 𝐌𝐚𝐧𝐲 𝐀𝐭𝐭𝐚𝐜𝐤𝐬 !! 𝐂𝐚𝐮𝐬𝐞 𝐀 𝐁𝐚𝐧 𝐅𝐫𝐨𝐦 𝐁𝐨𝐭
 𝟐. 𝐃𝐨𝐧𝐭 𝐑𝐮𝐧 𝟐 𝐀𝐭𝐭𝐚𝐜𝐤𝐬 𝐀𝐭 𝐒𝐚𝐦𝐞 𝐓𝐢𝐦𝐞 𝐁𝐞𝐜𝐳 𝐈𝐟 𝐔 𝐓𝐡𝐞𝐧 𝐔 𝐆𝐨𝐭 𝐁𝐚𝐧𝐧𝐞𝐝 𝐅𝐫𝐨𝐦 𝐁𝐨𝐭.
-𝟑. 𝐌𝐚𝐤𝐞 𝐒𝐮𝐫𝐞 𝐘𝐨𝐮 𝐉𝐨𝐢𝐧𝐞𝐝 @GODDDOSFREE 𝐎𝐭𝐡𝐞𝐫𝐰𝐢𝐬𝐞 𝐓𝐡𝐞 𝐃𝐃𝐨𝐒 𝐖𝐢𝐥𝐥 𝐍𝐨𝐭 𝐖𝐨𝐫𝐤.
+𝟑. 𝐌𝐚𝐤𝐞 𝐒𝐮𝐫𝐞 𝐘𝐨𝐮 𝐉𝐨𝐢𝐧𝐞𝐝 https://t.me/+5Ig7AVsqWowwM2I1 𝐎𝐭𝐡𝐞𝐫𝐰𝐢𝐬𝐞 𝐓𝐡𝐞 𝐃𝐃𝐨𝐒 𝐖𝐢𝐥𝐥 𝐍𝐨𝐭 𝐖𝐨𝐫𝐤.
 𝟒. 𝐖𝐞 𝐃𝐚𝐢𝐥𝐲 𝐂𝐡𝐞𝐜𝐤𝐬 𝐓𝐡𝐞 𝐋𝐨𝐠𝐬 𝐒𝐨 𝐅𝐨𝐥𝐥𝐨𝐰 𝐭𝐡𝐞𝐬𝐞 𝐫𝐮𝐥𝐞𝐬 𝐭𝐨 𝐚𝐯𝐨𝐢𝐝 𝐁𝐚𝐧!!!'''
     bot.reply_to(message, response)
 
@@ -481,8 +481,8 @@ def welcome_tutorial(message):
     user_name = message.from_user.first_name
     response = f'''{user_name} 𝐇𝐨𝐰 𝐓𝐨 𝐔𝐬𝐞 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 :
 
-📽️ /video : 𝐃𝐞𝐭𝐚𝐢𝐥𝐞𝐝 𝐕𝐞𝐝𝐢𝐨 𝐇𝐨𝐰 𝐓𝐨 𝐃𝐃𝐨𝐒 𝐅𝐫𝐨𝐦 @SHIVAMXRAJ.
-💻 /httpcanary : https://t.me/GODCRACKSS/317.
+📽️ /video : 𝐃𝐞𝐭𝐚𝐢𝐥𝐞𝐝 𝐕𝐞𝐝𝐢𝐨 𝐇𝐨𝐰 𝐓𝐨 𝐃𝐃𝐨𝐒 𝐅𝐫𝐨𝐦 @ILLEGALCHEAT78.
+💻 /httpcanary : https://t.me/c/2107786839/2906.
 '''
 
     bot.reply_to(message, response)
@@ -490,14 +490,14 @@ def welcome_tutorial(message):
 @bot.message_handler(commands=['httpcanary'])
 def welcome_rules(message):
     user_name = message.from_user.first_name
-    response = f'''{user_name} 𝐇𝐞𝐫𝐞 𝐈𝐬 𝐓𝐡𝐞 𝐋𝐢𝐧𝐤 𝐎𝐟 𝐀𝐧 𝐀𝐩𝐩𝐥𝐢𝐜𝐚𝐭𝐢𝐨𝐧 𝐓𝐨 𝐂𝐚𝐭𝐜𝐡 𝐑𝐨𝐨𝐦 𝐈𝐩 𝐀𝐧𝐝 𝐏𝐨𝐫𝐭 :\nhttps://t.me/+blZi-C4ujVszZTQ1'''
+    response = f'''{user_name} 𝐇𝐞𝐫𝐞 𝐈𝐬 𝐓𝐡𝐞 𝐋𝐢𝐧𝐤 𝐎𝐟 𝐀𝐧 𝐀𝐩𝐩𝐥𝐢𝐜𝐚𝐭𝐢𝐨𝐧 𝐓𝐨 𝐂𝐚𝐭𝐜𝐡 𝐑𝐨𝐨𝐦 𝐈𝐩 𝐀𝐧𝐝 𝐏𝐨𝐫𝐭 :\nhttps://t.me/+5Ig7AVsqWowwM2I1'''
     
     bot.reply_to(message, response)
     
 @bot.message_handler(commands=['video'])
 def welcome_rules(message):
     user_name = message.from_user.first_name
-    response = f'''{user_name} 𝐇𝐞𝐫𝐞'𝐬 𝐓𝐡𝐞 𝐋𝐢𝐧𝐤 𝐎𝐟 𝐃𝐞𝐭𝐚𝐢𝐥𝐞𝐝 𝐕𝐞𝐝𝐢𝐨 𝐇𝐨𝐰 𝐓𝐨 𝐃𝐃𝐨𝐒 𝐅𝐫𝐨𝐦 https://t.me/+blZi-C4ujVszZTQ1 :\n@https://t.me/+blZi-C4ujVszZTQ1'''
+    response = f'''{user_name} 𝐇𝐞𝐫𝐞'𝐬 𝐓𝐡𝐞 𝐋𝐢𝐧𝐤 𝐎𝐟 𝐃𝐞𝐭𝐚𝐢𝐥𝐞𝐝 𝐕𝐞𝐝𝐢𝐨 𝐇𝐨𝐰 𝐓𝐨 𝐃𝐃𝐨𝐒 𝐅𝐫𝐨𝐦 https://t.me/+blZi-C4ujVszZTQ1 :\n@https://t.me/+5Ig7AVsqWowwM2I1'''
     
     bot.reply_to(message, response)
 
